@@ -5,7 +5,7 @@ body {
   width: 100svw;
   display: grid;
   place-items: center;
-  background-color: #11181c;
+  background-color: #212A37;
 }
 
 section {
@@ -13,16 +13,21 @@ section {
   width: 600px;
   display: grid;
   place-items: center;
-  background-color: purple;
+  border-radius: 8px;
+  background: rgb(0 0 0 / 60%);
+  backdrop-filter: saturate(180%) blur(10px);
+  box-shadow: 1px 1px 0 1px rgb(0 0 0);
+
 }
 
 .carousel {
   position: relative;
-  display: flex;
-  height: 300px;
-  width: 500px;
+  display: grid;
+  height: 350px;
+  width: 550px;
   overflow: hidden;
-  mask: radial-gradient(20px at 20px 20px,#0000 98%,#000) -20px -20px;
+  border: 1px solid rgb(255, 255, 255);
+  mask: radial-gradient(30px at 30px 30px,#0000 98%,#000) -30px -30px;
 }
 
 .slide > img {
@@ -38,28 +43,25 @@ section {
   z-index: 2;
   background: none;
   border: none;
-  color: #ffffff93;
+  color: rgb(235 235 235 / 40%);
   font-size: 3rem;
-  top: 45%;
+  place-self: center;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
 }
 
 .carousel-button:hover,
 .carousel-button:focus {
-  color: #fff;
+  color: #ebebeb;
 }
 
-.carousel-button:focus {
-  outline: 1px solid black;
-}
 
 .carousel-button.prev {
-  left: 1rem;
+  left: 10px;
 }
 
 .carousel-button.next {
-  right: 1rem;
+  right: 10px;
 }
 
 .slide {
