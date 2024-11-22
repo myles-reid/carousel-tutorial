@@ -21,6 +21,7 @@ section {
   display: flex;
   height: 300px;
   width: 500px;
+  overflow: hidden;
   mask: radial-gradient(20px at 20px 20px,#0000 98%,#000) -20px -20px;
 }
 
@@ -65,9 +66,11 @@ section {
   position: absolute;
   inset: 0;
   opacity: 0;
+  transition: all 1s ease-in-out;
 }
 
 .slide[data-active] {
   opacity: 1;
+  transition: all 1s ease-in-out;
 }
 

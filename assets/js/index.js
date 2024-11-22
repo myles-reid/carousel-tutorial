@@ -24,11 +24,15 @@ function toggleClass(element, text) {
 }
 
 const buttons = selectAll('[data-carousel-button]');
+const slides = selectAll('.slide');
 
 buttons.forEach(button => {
   listen('click', button, () => {
+
+    // determining what direction the slides are going.
     const offset = button.dataset.carouselButton === 'next' ? 1 : -1;
     
+   
     // selecting the parent, to get the slides. This will make sure no matter how
     // many carousels we have, they will all work no matter. 
     const slides = button.closest('[data-carousel]').querySelector('[data-slides]');
