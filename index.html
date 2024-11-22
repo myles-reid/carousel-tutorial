@@ -18,10 +18,14 @@
   </head>
   <body>
     <section>
-      <div class="carousel">
-        <button class="carousel-button prev"><i class="fa-solid fa-circle-arrow-left"></i></button>
-        <button class="carousel-button next"><i class="fa-solid fa-circle-arrow-right"></i></button>
-        <ul>
+      <div class="carousel" data-carousel>
+        <button class="carousel-button prev" data-carousel-button="prev">
+          <i class="fa-solid fa-circle-arrow-left"></i>
+        </button>
+        <button class="carousel-button next" data-carousel-button="next">
+          <i class="fa-solid fa-circle-arrow-right"></i>
+        </button>
+        <ul data-slides>
           <li class="slide" data-active><img alt="vineyard" src="./assets/img/vineyard.jpg"></li>
           <li class="slide"><img alt="volcano" src="./assets/img/volcano.jpg"></li>
           <li class="slide"><img alt="bridge" src="./assets/img/bridge.jpg"></li>
