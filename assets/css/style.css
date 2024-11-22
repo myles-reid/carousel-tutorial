@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+body {
+  height: 100svh;
+  width: 100svw;
+  display: grid;
+  place-items: center;
+  background-color: #11181c;
+}
+
+section {
+  height: 400px;
+  width: 600px;
+  display: grid;
+  place-items: center;
+  background-color: purple;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  height: 300px;
+  width: 500px;
+  mask: radial-gradient(20px at 20px 20px,#0000 98%,#000) -20px -20px;
+}
+
+.slide > img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  color: #ffffff93;
+  font-size: 3rem;
+  top: 45%;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: #fff;
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.slide[data-active] {
+  opacity: 1;
+}
+
